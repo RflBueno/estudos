@@ -1,0 +1,49 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.bike2 {
+  width: 150px;
+}
+/* .imgs {
+  width: 500px;
+} */
+
+body {
+  font-family: Arial;
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.item {
+  background: #111;
+  color: #fff;
+  padding: 35px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+span {
+  color: #febe01;
+}
+
+p {
+  color: #b2b2b2;
+}
+
+a {
+  display: inline-block;
+  background: #febe01;
+  color: #332200;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
