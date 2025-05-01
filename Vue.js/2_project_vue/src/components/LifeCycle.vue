@@ -18,14 +18,30 @@ export default {
             this.nome = "Raquel Martins"
             this.cargo = "Desenvolvedor Front-End"
         }, 1000)
-        this.nome = "Rafael Bueno"
-        this.cargo = "Desenvolvedor Front-End"
+        // this.nome = "Rafael Bueno"
+        // this.cargo = "Desenvolvedor Front-End"
+        // this.lifeCycle()
     },
     mounted() {
         console.log("O componente foi montado!")
+        // this.lifeCycle()
     },
     beforeDestroy() {
         console.log("O componente vai ser destruído!")
-    }
+    },
+    methods: {
+        // console.log("O componente foi atualizado!")
+        // setTimeout(() => {
+        //     this.nome = "Raquel Martins"
+        //     this.cargo = "Desenvolvedor Front-End"
+        // }, 1000)
+        lifeCycle() {
+            console.log("exec o ciclo de vida!")
+            setTimeout(() => {
+                this.nome = "Raquel Martins"
+                this.cargo = "Desenvolvedor Front-End"
+            }, 1000)
+        }
+    },
 }
 </script>
