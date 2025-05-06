@@ -2,18 +2,20 @@
     <div>
         <p v-if="estaTrabalhando">Estou trabalhando no momento.</p>
         <p v-else>Estou em busca de novas oportunidades!</p>
-        <p>Utilizo as seguintes tecnologias</p>
+        <p>Utilizo as seguintes tecnologias para back-end:</p>
             <ul>
-                <li>Vue.js</li>
-                <li>JavaScript</li>
-                <li>Python</li> 
+                <li v-for="(backend, index) in backendTechs" :key="index">{{ backend }}</li>
             </ul>
-            <div>
-                <button @click="showEmail">{{ textoBtn }}</button>
-            </div>
-            <p v-show="mostrarEmail">Mande uma mensagem para: {{ email }}</p>
-            <p class="portfolio"> Para acessar meu portfolio <a v-bind:href="meuLink" target="_blank">basta clicar aqui</a></p>
-            <Picture />
+        <p>Utilizo as seguintes tecnologias para front-end:</p>
+            <ul>
+                <li v-for="frontend in frontendTechs" :key="frontend.id">{{ frontend.language }}</li>
+            </ul>
+        <div>
+            <button @click="showEmail">{{ textoBtn }}</button>
+        </div>
+        <p v-show="mostrarEmail">Mande uma mensagem para: {{ email }}</p>
+        <p class="portfolio"> Para acessar meu portfolio <a v-bind:href="meuLink" target="_blank">basta clicar aqui</a></p>
+        <Picture />
     </div>
 </template>
 
@@ -31,6 +33,24 @@ import Picture from './Picture.vue';
                 email: 'devBueno@hotmail.com',
                 meuLink: 'https://google.com',
                 textoBtn: 'Mostrar email',
+                backendTechs: [
+                    'PHP',
+                    'JavaScript',
+                    'Python',
+                ],
+                frontendTechs: [{
+                    id: 1, language: 'HTML',
+                },
+                {
+                    id: 2, language: 'CSS',
+                },
+                {
+                    id: 3, language: 'JavaScript',
+                },
+                {
+                    id: 4, language: 'Vue.js',
+                }
+                ],
             }
         },
         methods: {

@@ -11,15 +11,9 @@ export default {
     name: 'Header',
     data() {
         return {
-            title: 'My Vue.js App'
+            
         };
     },
-    methods: {
-        navigateTo(section) {
-            // Logic to navigate to different sections of the app
-            console.log(`Navigating to ${section}`);
-        }
-    }
 };
 </script>
 

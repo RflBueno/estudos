@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Meu formulario</h2>
-        <form action="">
+        <form action="" @submit="enviarForm($event)">
         <div>
             <InputText />
         </div>
@@ -26,6 +26,12 @@ import Submit from './form/Submit.vue'
         components: {
             InputText,
             Submit,
+        },
+        methods: {
+            enviarForm(e) {
+                e.preventDefault()
+                alert('Formulario enviado!')
+            }
         }
     }
 </script>
